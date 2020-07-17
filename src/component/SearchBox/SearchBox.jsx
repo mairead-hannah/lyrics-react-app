@@ -22,15 +22,11 @@ export default class SearchBox extends Component {
     })
   }
 
-  handleClick = () => {
-    this.getLyrics()
-  }
-
 
   render() { 
     return (  
     <>      
-      <button onClick={this.handleClick}>click for lyrics</button>
+      <button onClick={this.getLyrics}>click for lyrics</button>
       <Lyrics addLyrics={this.state.lyricText}/>
     </>
     );
