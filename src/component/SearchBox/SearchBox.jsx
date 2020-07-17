@@ -3,41 +3,31 @@ import Lyrics from "../Lyrics";
 
 export default class SearchBox extends Component {
   state = { 
-    lyrics: ""
+    lyricText: ""
   }
 
-  displayLyrics = (text) => {
-    this.setState({ lyrics: text })
+
+  getLyrics = () => {
+    fetch("https://api.lyrics.ovh/v1/Coldplay/Adventure of a Lifetime")
+    .then(response => {
+      return response.json();
+    })
+    .then(jsonObj => {
+      const lyrics = jsonObj.lyrics; //'lyrics' ref refers to what I have in postman
+      this.setState({ lyricText: lyrics }) //as above
+      console.log(lyrics)
+    })
+    .catch(error => {
+      console.log(error);
+    })
   }
-
-  handleClick = () => {
-
-    this.displayLyrics("some random lyrics")
-
-    // fetch("https://api.lyrics.ovh/v1/Coldplay/Adventure of a Lifetime")
-    //   .then(response => {
-    //     return response.json();
-    //   })
-    //   .then(jsonObj => {
-    //     const lyrics = jsonObj.lyrics;
-    //     const outputSection = document.querySelector('section').innerHTML += `<p>${lyrics}</p>`;
-  
-    //     console.log(lyrics);
-  
-    //   })
-    //   .catch(error => {
-    //     console.log(error);
-    //   })
-  
-  }
-
 
 
   render() { 
     return (  
     <>      
-      <button onClick={this.handleClick}>click for lyrics</button>
-      <Lyrics addLyrics={this.state.lyrics}/>
+      <button onClick={this.getLyrics}>click for lyrics</button>
+      <Lyrics addLyrics={this.state.lyricText}/>
     </>
     );
   }
