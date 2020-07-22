@@ -3,12 +3,24 @@ import Lyrics from "../Lyrics";
 
 export default class SearchBox extends Component {
   state = { 
-    lyricText: ""
+    lyricText: "",
+    artistName: "",
+    songTitle: ""
+  }
+
+  getArtistName = (event) => {
+    this.setState({artistName: event.target.value})
+    console.log(this.state.artistName);
+  }
+  
+
+  getSongTitle = (event) => {
+    this.setState({songTitle: event.target.value})
   }
 
 
   getLyrics = () => {
-    fetch("https://api.lyrics.ovh/v1/Coldplay/Adventure of a Lifetime")
+    fetch(`https://api.lyrics.ovh/v1/${this.state.artistName}/${this.state.songTitle}`)
     .then(response => {
       return response.json();
     })
@@ -25,8 +37,12 @@ export default class SearchBox extends Component {
 
   render() { 
     return (  
-    <>      
-      <button onClick={this.getLyrics}>click for lyrics</button>
+    <>
+      <h3>Artist:</h3>
+      <input type="text" placeholder="type artist name here" onChange={this.state.artistName}></input> 
+      <h3>Song Title:</h3>
+      <input type="text" placeholder="type song title here" onChange={this.state.songTitle}></input>  
+      <button onClick={this.getLyrics}>Submit</button>
       <Lyrics addLyrics={this.state.lyricText}/>
     </>
     );
@@ -39,3 +55,6 @@ export default class SearchBox extends Component {
 
 
 
+//questions
+//how to pass in the name of the artist and song?
+//how should the components be organised in the tree?

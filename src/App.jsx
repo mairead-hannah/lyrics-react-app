@@ -7,6 +7,7 @@ export default class App extends Component {
   render() { 
     return ( 
       <>
+      <h1>Search for song lyrics below</h1>
       <SearchBox/>
       
       
