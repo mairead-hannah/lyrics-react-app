@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import SearchBox from './component/SearchBox'
 
+
 export default class App extends Component {
   state = {  }
   render() { 
     return ( 
       <>
       <SearchBox/>
+      
       
       </>
     );
