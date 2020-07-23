@@ -8,13 +8,13 @@ export default class SearchBox extends Component {
     songTitle: ""
   }
 
-  getArtistName = (event) => {
+  setArtistName = (event) => {
     this.setState({artistName: event.target.value})
     console.log(this.state.artistName);
   }
   
 
-  getSongTitle = (event) => {
+  setSongTitle = (event) => {
     this.setState({songTitle: event.target.value})
   }
 
@@ -25,13 +25,18 @@ export default class SearchBox extends Component {
       return response.json();
     })
     .then(jsonObj => {
+      if (!jsonObj.lyrics) {
+        this.setState({lyricText: `Sorry, these lyrics have not been found`})
+    } else {
       const lyrics = jsonObj.lyrics; //'lyrics' ref refers to what I have in postman
       this.setState({ lyricText: lyrics }) //as above
       console.log(lyrics)
-    })
+    }})
+  
     .catch(error => {
       console.log(error);
     })
+  
   }
 
 
@@ -39,9 +44,9 @@ export default class SearchBox extends Component {
     return (  
     <>
       <h3>Artist:</h3>
-      <input type="text" placeholder="type artist name here" onChange={this.state.artistName}></input> 
+      <input type="text" placeholder="type artist name here" onChange={this.setArtistName}></input> 
       <h3>Song Title:</h3>
-      <input type="text" placeholder="type song title here" onChange={this.state.songTitle}></input>  
+      <input type="text" placeholder="type song title here" onChange={this.setSongTitle}></input>  
       <button onClick={this.getLyrics}>Submit</button>
       <Lyrics addLyrics={this.state.lyricText}/>
     </>

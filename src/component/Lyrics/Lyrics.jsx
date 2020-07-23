@@ -5,9 +5,13 @@ export default class Lyrics extends Component {
 
   finishedText = (rawLyrics) => {
     const paraArray = rawLyrics.split('\n').map((item, i) => {
-      return <p>{item}</p>
-    })
-    // const lineArray = 
+      if (item === "") {
+        return <br />;
+    } else { 
+        return <p>{item}</p>;
+    }})
+    
+    console.log (paraArray);
     return paraArray
   }
 
