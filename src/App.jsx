@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import SearchBox from './component/SearchBox'
+import Logic from './component/Logic'
+import styles from './App.module.scss';
 
 
 export default class App extends Component {
@@ -8,7 +9,7 @@ export default class App extends Component {
     return ( 
       <>
       <h1>Search for song lyrics below</h1>
-      <SearchBox/>
+      <Logic/>
       
       
       </>
