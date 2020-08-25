@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import SearchBox from "../SearchBox";
+import Button from "../Button";
 import Lyrics from "../Lyrics";
 
 export default class Logic extends Component {
@@ -43,11 +45,11 @@ export default class Logic extends Component {
   render() { 
     return (  
     <>
-      <h3>Artist:</h3>
-      <input type="text" placeholder="type artist name here" onChange={this.setArtistName}></input> 
-      <h3>Song Title:</h3>
-      <input type="text" placeholder="type song title here" onChange={this.setSongTitle}></input>  
-      <button onClick={this.getLyrics}>Submit</button>
+      <SearchBox
+        searchArtist={this.setArtistName}
+        searchSong={this.setSongTitle}
+      />
+      <Button buttonLogic={this.getLyrics} text="Submit"/>
       <Lyrics addLyrics={this.state.lyricText}/>
     </>
     );
