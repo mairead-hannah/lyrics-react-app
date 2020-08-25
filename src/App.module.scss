@@ -1,3 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-image: url('./assets/wallpaper.png');
+
+  h1 {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    margin-top: 5px;
+    padding: 5px;
+    color: #DE0B9F;
+    // text-shadow: 0 0 5px white, 
+    // 0 0 10px #DEADDD,
+    // 0 0 40px #DEADDD; 
+    background-color: black;
+    border-radius: 4px;
+  }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from "./Lyrics.module.scss";
 
 export default class Lyrics extends Component {
   state = {  }
