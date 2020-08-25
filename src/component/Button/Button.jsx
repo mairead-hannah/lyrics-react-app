@@ -5,9 +5,9 @@ export default class Button extends Component {
   state = {  }
   render() { 
     return ( 
-    <>
+    <div className={styles.button}>
     <button onClick={this.props.buttonLogic}>{this.props.text}</button>
-    </>
+    </div>
     );
   }
 }
