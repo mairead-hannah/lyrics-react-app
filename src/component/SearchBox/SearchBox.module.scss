@@ -1,9 +1,33 @@
+@import "../../../src/variables.scss";
+
 .search {
   margin: 0 auto;
   text-align: center;
-  width: 50%;
-  padding: 5%;
+  max-width: 90%;
+  padding: 8%;
   background-color: #DE0B9F;
+  font-size: 1.2em;
+
+  @media (min-width: $tablet) {
+    width: 80%;
+    padding: 5%;
+  }
+  @media (min-width: $laptop) {
+    width: 50%;
+  }
+
+  .artist {
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    padding: 2%;
+  }
+
+  input {
+    border-radius: 4px;
+    padding: 2%;
+  }
 
   placeholder {
     color: #1A0BDE;

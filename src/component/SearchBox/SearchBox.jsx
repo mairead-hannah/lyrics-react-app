@@ -5,10 +5,12 @@ export default class SearchBox extends Component {
   state = {  }
   render() { 
     return (
-      <section className={styles.inputFields}>
-        <div className={styles.search}>
+      <section className={styles.search}>
+        <div className={styles.artist}>
           <h3>Artist:</h3>
           <input type="text" placeholder="type artist name here" onChange={this.props.searchArtist}></input> 
+        </div>
+        <div className={styles.song}>
           <h3>Song Title:</h3>
           <input type="text" placeholder="type song title here" onChange={this.props.searchSong}></input>  
         </div>

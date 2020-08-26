@@ -1,9 +1,19 @@
+@import "../../../src/variables.scss";
+
 .button {
   margin: 0 auto;
   text-align: center;
-  width: 50%;
-  padding: 2%;
+  max-width: 90%;
+  padding: 5%;
   background-color: #1A0BDE;
+
+  @media (min-width: $tablet) {
+    width: 80%;
+    padding: 2%;
+  }
+  @media (min-width: $laptop) {
+    width: 50%;
+  }
 
   button {
     border-radius: 4px;

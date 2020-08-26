@@ -17,7 +17,13 @@ export default class Lyrics extends Component {
   }
 
   render() { 
-    return (  <div>{this.finishedText(this.props.addLyrics)}</div>)
+    return (  
+    <section className={styles.lyricSection}>
+      <div className={styles.lyrics}>
+        {this.finishedText(this.props.addLyrics)}
+      </div>
+    </section>
+    )
   }
 }
 
