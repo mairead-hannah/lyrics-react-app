@@ -1,3 +1,32 @@
+@import "/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, serif;
+}
+
 body {
   background-image: url('./assets/wallpaper.png');
+
+  h1 {
+    margin: auto;
+    max-width: 90%;
+    text-align: center;
+    margin-top: 5%;
+    padding: 5px;
+    color: #DE0B9F;
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+    font-size: 2em;
+
+    @media (min-width: $tablet) {
+      width: 80%;
+    }
+    @media (min-width: $laptop) {
+      width: 50%;
+      padding: 20px;
+    }
+  }
 }

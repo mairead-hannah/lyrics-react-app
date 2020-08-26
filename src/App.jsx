@@ -10,8 +10,6 @@ export default class App extends Component {
       <>
       <h1>Search for song lyrics below</h1>
       <Logic/>
-      
-      
       </>
     );
   }
