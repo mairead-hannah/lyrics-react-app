@@ -12,11 +12,26 @@
   @media (min-width: $laptop) {
     width: 40%;
   }
+  .lyricsSection:empty {
+    display: none;
+  }
+
 
 
   .lyrics {
     padding: 5%;
     background-color: black;
+    border-radius: 10px;
     color: white;
   }
+
+  
+  .lyrics:empty {
+    display: none;
+  }
+
+}
+
+.lyricsSection:empty {
+  display: none;
 }
