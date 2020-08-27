@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/lyrics/static/css/main.723ac1e5.chunk.css",
+    "main.js": "/lyrics/static/js/main.440234c4.chunk.js",
+    "main.js.map": "/lyrics/static/js/main.440234c4.chunk.js.map",
+    "runtime-main.js": "/lyrics/static/js/runtime-main.c3b022fc.js",
+    "runtime-main.js.map": "/lyrics/static/js/runtime-main.c3b022fc.js.map",
+    "static/js/2.2a6b69a8.chunk.js": "/lyrics/static/js/2.2a6b69a8.chunk.js",
+    "static/js/2.2a6b69a8.chunk.js.map": "/lyrics/static/js/2.2a6b69a8.chunk.js.map",
+    "index.html": "/lyrics/index.html",
+    "precache-manifest.6bd7fcf4a21381356a419899b70c00cc.js": "/lyrics/precache-manifest.6bd7fcf4a21381356a419899b70c00cc.js",
+    "service-worker.js": "/lyrics/service-worker.js",
+    "static/css/main.723ac1e5.chunk.css.map": "/lyrics/static/css/main.723ac1e5.chunk.css.map",
+    "static/js/2.2a6b69a8.chunk.js.LICENSE.txt": "/lyrics/static/js/2.2a6b69a8.chunk.js.LICENSE.txt",
+    "static/media/App.module.scss": "/lyrics/static/media/wallpaper.890c86cc.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3b022fc.js",
+    "static/js/2.2a6b69a8.chunk.js",
+    "static/css/main.723ac1e5.chunk.css",
+    "static/js/main.440234c4.chunk.js"
+  ]
+}
